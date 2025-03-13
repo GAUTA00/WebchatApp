@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Centering Content */
+main {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+input {
+    width: 93%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+/* Join Form (Row Layout) */
+.form-join {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.form-join input {
+    flex: 1;
+}
+
+#join {
+    width: auto;
+    padding: 12px;
+}
+
+/* Chat Display */
+.chat-display {
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Chat Messages */
+.chat-display li {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+/* Alternating Chat Messages */
+.chat-display li:nth-child(odd) {
+    background: #0056b3;
+    align-self: flex-start;
+}
+
+.chat-display li:nth-child(even) {
+    background: #34c759;
+    align-self: flex-end;
+}
+
+/* User & Room List */
+.user-list,
+.room-list,
+.activity {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+    padding: 5px;
+}
+
+/* Message Input */
+.form-msg {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-msg input {
+    flex: 1;
+}
+
+.form-msg button {
+    width: auto;
+    padding: 12px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    main {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .form-join {
+        flex-direction: column;
+    }
+
+    .form-join input,
+    .form-join button {
+        width: 100%;
+    }
+
+    .chat-display {
+        max-height: 200px;
+    }
+}
