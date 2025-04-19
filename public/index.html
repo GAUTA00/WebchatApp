@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"
         integrity="sha512-8ExARjWWkIllMlNzVg7JKq9RKWPlJABQUNq6YvAjE/HobctjH/NA+bSiDMDvouBVjp4Wwnf1VP1OEv7Zgjtuxw=="
@@ -14,7 +15,12 @@
 
 <body>
     <main>
+        <div class="app-header">
+            <h1><i class="fas fa-comments"></i> Chat App</h1>
+        </div>
+
         <form class="form-join">
+            <div class="section-title">Join Chat</div>
             <input type="text" id="name" maxlength="10" placeholder="Enter your name" size="5" required>
             <input type="text" id="room" placeholder="chat room" size="5" required>
             <button id="join" type="submit">join</button>
@@ -22,16 +28,25 @@
 
         <ul class="chat-display"> </ul>
 
-        <p class="user-list"></p>
-
-        <p class="room-list"></p>
+        </div>
 
         <p class="activity"></p>
 
         <form class="form-msg">
             <input type="text" id="message" placeholder="Enter message">
-            <button type="submit">Send</button>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
         </form>
+
+        <div class="info-section">
+            <div class="info-block">
+                <div class="section-title"><i class="fas fa-users"></i> Users</div>
+                <p class="user-list"></p>
+            </div>
+
+            <div class="info-block">
+                <div class="section-title"><i class="fas fa-door-open"></i> Rooms</div>
+                <p class="room-list"></p>
+            </div>
     </main>
 </body>
 
